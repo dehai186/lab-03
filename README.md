@@ -2,8 +2,8 @@
 
 ## Student Details
 
-- **Full Name:** `<Enter name>`
-- **CCID:** `<Enter ccid>`
+- **Full Name:** `Dehai Yu`
+- **CCID:** `dehai1`
 
 ## References and Resources
 
