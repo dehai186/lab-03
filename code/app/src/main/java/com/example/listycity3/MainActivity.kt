@@ -25,12 +25,19 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         val cityRepository = CityRepository()
+
+
         setContent {
             ListyCity3Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     CityListScreen(
                         cities = cityRepository.cities,
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding),
+
+                        onAddCity = {cityRepository.add(it)},
+                        onReplaceCity = { city, city1 ->
+                            cityRepository.replace(city = city, newCity = city1)
+                        }
                     )
                 }
             }
